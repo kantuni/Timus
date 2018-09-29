@@ -13,8 +13,8 @@ int main() {
     double sec = r * r * alpha;
     double triag = x * y;
     double seg = sec - triag;
-    double diag = a * sqrt(2) / 2;
-    if (r > diag) {
+    double hyp = a * sqrt(2) / 2;
+    if (r > hyp) {
       ans = a * a;
     } else {
       ans = r * r * PI - 4 * seg;
