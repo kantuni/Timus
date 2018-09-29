@@ -17,7 +17,7 @@ int main() {
   vector<int> primes;
   int cnt = 0, maxn = 15005;
   int curr = 1;
-  while (cnt < 15000) {
+  while (cnt < maxn) {
     do {
       curr++;
     } while (!prime(curr));
