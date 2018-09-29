@@ -5,7 +5,7 @@ int f(int n, int k) {
   if (n == k) {
     return k;
   } else if (n < k) {
-    return n % k;
+    return n;
   }
   return n * f(n - k, k);
 }
