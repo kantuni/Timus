@@ -8,19 +8,24 @@ int main() {
   for (int i = 0; i < m; i++) {
     cin >> k[i];
   }
-  sort(k.rbegin(), k.rend());
-  int turn = 0;
-  while (n > 0) {
-    for (int i = 0; i < m; i++) {
-      if (n - k[i] < 0) {
-        continue;
-      } else {
-        n -= k[i];
+  vector<int> wl(n + 1);
+  wl[0] = 1;
+  for (int i = 1; i < n + 1; i++) {
+    bool win = false;
+    for (int j = 0; j < m; j++) {
+      if (i - k[j] < 0) {
+        break;
+      } else if (wl[i - k[j]] == 0) {
+        win = true;
         break;
       }
     }
-    turn = !turn;
+    wl[i] = win;
   }
-  cout << turn + 1 << "\n";
+  if (wl[n] == 1) {
+    cout << 1 << "\n";
+  } else {
+    cout << 2 << "\n";
+  }
   return 0;
 }
