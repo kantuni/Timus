@@ -23,9 +23,9 @@ int main() {
     wl[i] = win;
   }
   if (wl[n] == 1) {
-    cout << 1 << "\n";
+    cout << 1 << endl;
   } else {
-    cout << 2 << "\n";
+    cout << 2 << endl;
   }
   return 0;
 }
