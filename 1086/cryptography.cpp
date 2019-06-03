@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
+#define MAXN 15005
 using namespace std;
 
 bool prime(int n) {
-  if (n < 2) {
-    return false;
-  }
   for (int i = 2; i <= sqrt(1. * n); i++) {
     if (n % i == 0) {
       return false;
@@ -15,13 +13,12 @@ bool prime(int n) {
 
 int main() {
   vector<int> primes;
-  int cnt = 0, maxn = 15005;
-  int curr = 1;
-  while (cnt < maxn) {
-    do {
-      curr++;
-    } while (!prime(curr));
-    primes.push_back(curr);
+  int cnt = 0, cur = 2;
+  while (cnt < MAXN) {
+    while (!prime(cur)) {
+      cur++;
+    }
+    primes.push_back(cur);
     cnt++;
   }
   int k;
@@ -29,7 +26,7 @@ int main() {
   while (k--) {
     int n;
     cin >> n;
-    cout << primes[n - 1] << "\n";
+    cout << primes[n - 1] << endl;
   }
   return 0;
 }
