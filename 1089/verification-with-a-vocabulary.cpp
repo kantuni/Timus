@@ -45,8 +45,8 @@ int main() {
         start = end = -1;
       }
     }
-    cout << line << "\n";
+    cout << line << endl;
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
