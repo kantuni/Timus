@@ -23,6 +23,6 @@ int main() {
     ans = r * r * PI;
   }
   cout << fixed << setprecision(3);
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
