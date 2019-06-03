@@ -21,6 +21,6 @@ int main() {
     }
     ans = (ans == -1) ? abs(r - l) : min(ans, abs(r - l));
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
