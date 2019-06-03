@@ -12,7 +12,7 @@ int main() {
   for (int i = 0; i < pow(2, n); i++) {
     bitset<20> bits(i);
     int l = 0, r = 0;
-    for (int j = n - 1; j >= 0; j--) {
+    for (int j = n - 1; j > -1; j--) {
       if (bits[j] == 0) {
         l += w[n - 1 - j];
       } else {
