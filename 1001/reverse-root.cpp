@@ -8,8 +8,8 @@ int main() {
     nums.push_back(num);
   }
   cout << fixed << setprecision(4);
-  for (int i = nums.size() - 1; i >= 0; i--) {
-    cout << sqrt(nums[i]) << "\n";
+  for (int i = nums.size() - 1; i > -1; i--) {
+    cout << sqrt(nums[i]) << endl;
   }
   return 0;
 }
