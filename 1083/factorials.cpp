@@ -13,9 +13,8 @@ int f(int n, int k) {
 int main() {
   int n;
   cin >> n;
-  string exc;
-  cin >> exc;
-  int k = exc.size();
-  cout << f(n, k) << "\n";
+  string ex;
+  cin >> ex;
+  cout << f(n, ex.size()) << endl;
   return 0;
 }
