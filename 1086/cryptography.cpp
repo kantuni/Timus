@@ -19,7 +19,7 @@ int main() {
       cur++;
     }
     primes.push_back(cur);
-    cnt++;
+    cnt++, cur++;
   }
   int k;
   cin >> k;
