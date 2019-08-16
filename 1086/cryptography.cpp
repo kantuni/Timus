@@ -2,8 +2,8 @@
 #define MAXN 15005
 using namespace std;
 
-bool prime(int n) {
-  for (int i = 2; i < sqrt(n) + 1; i++) {
+bool isPrime(int n) {
+  for (int i = 2; i * i <= n; i++) {
     if (n % i == 0) {
       return false;
     }
@@ -15,7 +15,7 @@ int main() {
   vector<int> primes;
   int cnt = 0, cur = 2;
   while (cnt < MAXN) {
-    while (!prime(cur)) {
+    while (!isPrime(cur)) {
       cur++;
     }
     primes.push_back(cur);
